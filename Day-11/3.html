@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+</html>
+
+<script>
+    // let count = 1
+    // for(let row = 1; row <= 4; row++){
+       
+    // let r = ""
+    //     for(let col = 4; col >= row ; col--){
+           
+    // r += count++
+    //     }
+    //     console.log(r)
+    // }
+    let count = 1
+    for(let row = 1; row <= 4; row++){
+        let box = ""
+        for(let col = 4; col >= row; col--){
+         box += count++ + "&nbsp" + "&nbsp" + "&nbsp" + "&nbsp"
+        }
+        document.write(box + "<br>" + "<br>")
+    }
+</script>

@@ -1,0 +1,44 @@
+<!-- A  simple JavaScript program to calculate and assign grades based on a student's percentage. 
+The program should take the percentage as input and output the corresponding grade (A, B, C, D, or F).
+A: 90% and above
+B: 80% - 89%
+C: 70% - 79%
+D: 60% - 69.
+F: Below 60% -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <center>
+        <br><br><br>
+        <h1 id="ans"></h1>
+    </center>
+    
+</body>
+</html>
+
+<script>
+    let a = prompt("ENTER MARKS : ")
+
+    if(a >= 90){
+        document.getElementById("ans").innerHTML = "A GRADE"
+    }
+    else if(a >= 80 && a <= 89){
+        document.getElementById("ans").innerHTML = "B GRADE"
+    }
+    else if(a >= 70 && a <= 79){
+        document.getElementById("ans").innerHTML = "C GRADE"
+    }
+    else if(a >= 60 && a <= 69){
+        document.getElementById("ans").innerHTML = "D GRADE"
+    }
+    else{
+        document.getElementById("ans").innerHTML = "E GRADE"
+    }
+</script>

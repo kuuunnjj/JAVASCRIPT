@@ -1,0 +1,59 @@
+<!-- 3. Implement a program that calculates the largest among five numbers entered by the user. -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <br /><br /><br />
+    <center>
+      <label>FIRST : </label>
+      <input type="text" id="a" />
+      <label>SECOND : </label>
+      <input type="text" id="b" />
+      <label>THIRD : </label>
+      <input type="text" id="c" />
+      <label>FORTH : </label>
+      <input type="text" id="d" />
+      <label>FIFTH : </label>
+      <input type="text" id="e" />
+
+      <br /><br /><br />
+
+      <h1 id="ans"></h1>
+    </center>
+  </body>
+</html>
+
+<script>
+  let p = document.getElementById("a").value;
+  let q = document.getElementById("b").value;
+  let r = document.getElementById("c").value;
+  let s = document.getElementById("d").value;
+  let t = document.getElementById("e").value;
+
+  if (p == "" && q == "" && r == "" && s == "" && t == "") {
+    document.getElementById("ans").innerHTML = "ENTER VALID NUMBERS";
+  } else {
+    if (p < q && p < r && p < s && p < t) {
+      document.getElementById("ans").innerHTML = "P";
+    } else {
+      if (q < r && q < s && q < t) {
+        document.getElementById("ans").innerHTML = "Q";
+      } else {
+        if (r < p && r < s && r < t) {
+          document.getElementById("ans").innerHTML = "R";
+        } else {
+          if (s < p && s < q && s < t) {
+            document.getElementById("ans").innerHTML = "S";
+          } else {
+            document.getElementById("ans").innerHTML = "T";
+          }
+        }
+      }
+    }
+  }
+</script>

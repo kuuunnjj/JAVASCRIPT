@@ -1,0 +1,39 @@
+<!-- . **Input Collection:**
+   - Enter the costs of individual food items ordered.
+   - Collect the total cost of drinks.
+
+   - Deduct the Goods and Services Tax (GST).
+   - Subtract the State Goods and Services Tax (SGST).
+   - Deduct any applicable service tax. -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <center>
+        <br><br><br>
+        <h1 id="ans"></h1>
+    </center>
+</body>
+</html>
+
+<script>
+
+    let a = prompt("SADA DOSA : ")
+    let b = prompt("MASALA DOSA : ")
+    let c = +a + +b
+
+    let d =  c * +0.18
+    let e =  c * +0.09
+    let f =  c * +0.05
+
+    let g = c + +d + +e + +f
+
+
+    document.getElementById("ans").innerHTML = "TOTAL BILL : " + g
+
+</script>

@@ -1,0 +1,52 @@
+<!-- **Question 2:**
+
+**Title:** Age Categorization
+
+**Description:** Create a JavaScript program that initializes a variable `age` and categorizes it based on the following conditions:
+- If `age` is greater than 0 and less than 12, console.log("Child").
+- If `age` is between 13 and 19 (inclusive), console.log("Teen").
+- If `age` is between 20 and 59 (inclusive), console.log("Adult").
+- If `age` is greater than or equal to 60, console.log("Senior"). -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <center>
+      <br /><br /><br />
+      <label>ENTER AGE : </label>
+      <input type="text" id="b" />
+      <br /><br /><br />
+      <h1 id="ans"></h1>
+    </center>
+  </body>
+</html>
+
+<script>
+  let a = document.getElementById("b").value;
+
+  if (a == "") {
+    document.getElementById("ans").innerHTML = "ENTER AGE !";
+  } else {
+    if (a > 0 && a <= 12) {
+      console.log("Child");
+      document.getElementById("ans").innerHTML = "Child";
+    } else if (a >= 13 && a <= 19) {
+      console.log("Teen");
+      document.getElementById("ans").innerHTML =
+        "Teen";
+    } else if (a >= 20 && a <= 59) {
+      console.log("Adult");
+      document.getElementById("ans").innerHTML =
+        "Adult";
+    } else {
+      console.log("Senior");
+      document.getElementById("ans").innerHTML =
+        "Senior";
+    }
+  }
+</script>

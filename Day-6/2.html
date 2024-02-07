@@ -1,0 +1,57 @@
+<!-- Write a JavaScript program that takes three numbers as input and finds the minimum among them. -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <center>
+        <br><br><br>
+        <h1 id="ans"></h1>
+    </center>
+</body>
+</html>
+
+<script>
+
+    let a = prompt("ENTER FIRST VALUE : ")
+    let b = prompt("ENTER SECOND VALUE : ")
+    let c = prompt("ENTER THIRD VALUE : ")
+    let d = prompt("ENTER FOURTH VALUE : ")
+    let e = prompt("ENTER FIFTH VALUE : ")
+
+    
+
+    if(a == "" && b == "" && c == "" && d == "" && e == ""){
+        document.getElementById("ans").innerHTML = "ENTER VALUES"
+    }
+    else{
+        
+        
+        a = parseInt(a)
+        b = parseInt(b)
+        c = parseInt(c)
+        d = parseInt(d)
+        e = parseInt(e)
+
+        if(a > b && a > c && a > d && a > e){
+            document.getElementById("ans").innerHTML = "A ==>" + a
+        }
+        else if(b > c && b > d && b > e){
+            document.getElementById("ans").innerHTML = "B ==>" + b
+        }
+        else if(c > d && c > e){
+            document.getElementById("ans").innerHTML = "C ==>" + c
+        }
+        else if(d > e){
+            document.getElementById("ans").innerHTML = "D ==>" + d
+        }
+        else{
+            document.getElementById("ans").innerHTML = "E ==>" + e
+        }
+       
+    }
+</script>
