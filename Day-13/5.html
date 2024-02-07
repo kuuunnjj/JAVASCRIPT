@@ -1,0 +1,40 @@
+<!-- Q5. Find product  of digits using function.  -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <center>
+        <br><br><br>
+        <label>ENTER THE VALUE : </label>
+        <input type="text" id="in">
+        <br><br>
+        <h1 id="ans"></h1>
+        <br><br><br>
+    </center>
+</body>
+</html>
+
+<script>
+
+    function hi(){
+    let a = document.getElementById("in").value
+    let b
+    let sum = 1
+    
+    while(a > 0){
+        b = a % 10
+        sum *= b
+        a = parseInt(a/10)
+    }
+    console.log("PRODUCT OF DIGIT IS ==> " + sum)
+    document.getElementById("ans").innerHTML = "PRODUCT OF DIGIT IS ==> " + sum
+    }
+
+    hi()
+    
+</script>

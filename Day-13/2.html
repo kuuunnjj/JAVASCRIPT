@@ -1,0 +1,41 @@
+<!-- Q2. Find sum of three number using function. -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <center>
+        <br><br><br>
+        <label>ENTER THE FRIST VALUE : </label>
+        <input type="text" id="in1"><br><br>
+        <label>ENTER THE SECOND VALUE : </label>
+        <input type="text" id="in2"><br><br>
+        <label>ENTER THE THIRD VALUE : </label>
+        <input type="text" id="in3"><br><br>
+        <h1 id="ans"></h1>
+        <br><br><br>
+    </center>
+    
+</body>
+</html>
+
+<script>
+
+    function hi(){
+    let a = document.getElementById("in1").value
+    let b = document.getElementById("in2").value
+    let c = document.getElementById("in2").value
+    let d = +a + +b + +c
+
+    document.getElementById("ans").innerHTML = "SUM IS ==> " + d
+    console.log("SUM IS ==> " + d)
+    
+    }
+
+    hi()
+    
+</script>
