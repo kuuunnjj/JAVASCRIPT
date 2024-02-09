@@ -1,0 +1,39 @@
+<!-- 3. Write a function called `multiply` that takes two integers as parameters and returns their product. -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <center>
+        <br><br><br>
+        <label>ENTER THE FIRST VALUE : </label>
+        <input type="text" id="in1">
+        <br><br>
+        <label>ENTER THE SECOND VALUE : </label>
+        <input type="text" id="in2">
+        <br><br>
+        <h1 id="ans"></h1>
+        <br><br><br>
+    </center>
+</body>
+</html>
+
+<script>
+    let a = document.getElementById("in1").value
+    let b = document.getElementById("in2").value
+
+    if(a == "" || b == ""){
+        document.getElementById("ans").innerHTML = "ENTER VALUES!"
+    }
+    else{
+        function multiply(x,y){
+            console.log(+y * +x)
+            document.getElementById("ans").innerHTML = +y * +x
+        }
+        multiply(a,b)
+    }
+</script>

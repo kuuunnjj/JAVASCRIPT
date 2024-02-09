@@ -1,0 +1,39 @@
+<!-- 5. Create a function called `power` that takes two integers, base and exponent, and returns the result of raising the base to the power of the exponent. -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <center>
+        <br><br><br>
+        <label>ENTER THE FIRST VALUE : </label>
+        <input type="text" id="in1">
+        <br><br>
+        <label>ENTER THE SECOND VALUE : </label>
+        <input type="text" id="in2">
+        <br><br>
+        <h1 id="ans"></h1>
+        <br><br><br>
+    </center>
+</body>
+</html>
+
+<script>
+    let a = document.getElementById("in1").value
+    let b = document.getElementById("in2").value
+
+    if(a == "" || b == ""){
+        document.getElementById("ans").innerHTML = "ENTER VALUES!"
+    }
+    else{
+        function power(x,y){
+            console.log(Math.pow(x,y))
+            document.getElementById("ans").innerHTML = Math.pow(x,y)
+        }
+        power(a,b)
+    }
+</script>

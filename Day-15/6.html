@@ -1,0 +1,51 @@
+<!-- 6. Implement a function called `factorial` that takes a single integer as a parameter and returns its factorial. The factorial of a number \( n \) is the product of all positive integers less than or equal to \( n \). -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <center>
+        <br><br><br>
+        <label>ENTER THE VALUE : </label>
+        <input type="text" id="in1">
+        <br><br>
+        <h1 id="ans"></h1>
+        <br><br><br>
+    </center>
+</body>
+</html>
+
+<script>
+
+
+    let a = document.getElementById("in1").value
+
+
+    if(a == ""){
+        document.getElementById("ans").innerHTML = "ENTER A VALUE !"
+    }
+    else{
+        function hi(x){
+    
+    for(let i = x-1; i > 0; i--){
+        x = x*i
+    }
+    console.log("FACTORIAL OF VALUE IS ==> " + x)
+    document.getElementById("ans").innerHTML = "FACTORIAL OF VALUE IS ==> " + x
+
+    }
+
+    hi(a)
+    }
+
+
+    
+   
+
+    
+
+</script>
