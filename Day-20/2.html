@@ -1,0 +1,25 @@
+<!-- **Question 2: Populate an Empty Array using Math Functions**
+
+Write a JavaScript program that initializes an empty array and then uses math functions to generate and push 5 random numbers (integers) between 1 and 100 into the array. Display the final array .
+
+Example Output: [23, 56, 89, 42, 17] -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   
+</body>
+</html>
+
+<script>
+    let box = []
+    for(let i = 0; i < 5; i++) {
+        box.push(Math.ceil(Math.random() * 100))
+    }
+    console.log(box)
+</script>

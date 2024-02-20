@@ -1,0 +1,16 @@
+<!-- 1. ARRAY STRING PATTERN- HOF
+Given an array of string generate an array whose first or last character is a
+Sample Input - ["assignment", "problem", "media", "upload"]
+Sample Output - ["assignment", "media"] -->
+
+<script>
+    let box = ["assignment", "problem", "media", "upload"]
+    
+    for(let i = 0; i < box.length; i++){
+        if(box[i][0] == 'a' || box[i][box[i].length-1] == 'a'){
+            console.log(box[i])
+        }
+    }
+
+    
+</script>
