@@ -1,0 +1,43 @@
+<!-- AMAZON OBJECT DATA
+1. Find average of rating .
+2. Find maximum price.
+3.Find minimum price. -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+</html>
+
+<script>
+    var amazon = [
+        {name: "speakers", price : 5400, rating : 4},
+        {name: "headphones", price : 30000, rating : 3},
+        {name: "playstation", price : 20000, rating : 5}
+    ]
+
+    let sum = 0
+    let max = 0
+    let min = amazon[0].price
+
+    for(var i = 0; i < amazon.length; i++){
+        sum += amazon[i].rating
+        if(amazon[i].price > max){
+            max = amazon[i].price
+        }
+        if(amazon[i].price < min){
+            min = amazon[i].price
+        }
+     
+    }
+    console.log("Average of rating ==> " + sum / amazon.length)
+    console.log("Maximum price. ==> " + max)
+    console.log("Minimum price. ==> " + min)
+ 
+</script>
