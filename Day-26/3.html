@@ -1,0 +1,122 @@
+<!-- Mini Calculator
+Create a mini calculator application, which has following functionalities
+Addition
+Subtraction
+Division
+Multiplication
+Your app should have
+Two input boxes which should take two numbers from the user.
+Four Buttons with following text content
+Add
+Subtract
+Divide
+Multiply
+When user enter 2 and 4 and clicks on multiply button, an alert should come with 8 as ansWhen user enter 8 and 4 and clicks on Divide button,an alert should come with 2 as ans -->
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Content Manipulation</title>
+  </head>
+  <style>
+    * {
+      margin: 0px;
+      padding: 0px;
+      box-sizing: border-box;
+    }
+    body {
+      background-color: black;
+      color: white;
+      margin: 100px;
+    }
+    input {
+      width: 100%;
+      height: 40px;
+      outline: none;
+      font-size: 20px;
+      margin-bottom: 30px;
+      padding: 20px;
+      margin-top: 10px;
+      border: 5px solid rgb(187, 252, 187);
+    }
+
+    input::placeholder {
+      font-size: 15px;
+    }
+    button {
+      width: 100%;
+      height: 35px;
+      border: none;
+      outline: none;
+      margin-block: 5px;
+      transition: 0.5s;
+      background-color: rgb(153, 225, 153);
+    }
+    button:hover {
+      cursor: pointer;
+      background-color: rgb(83, 119, 83);
+      transition: 0.5s;
+      color: white;
+    }
+    h1 {
+      color: rgb(153, 225, 153);
+    }
+    h2 {
+      color: rgb(153, 225, 153);
+      font-size: 15px;
+      margin-top: 20px;
+    }
+    hr {
+      margin-block: 15px;
+    }
+  </style>
+  <body>
+    <h1 id="firstname">FIRST NUMBER ==></h1>
+    <input type="text" placeholder="Enter your first number" id="f" />
+    <br /><br />
+
+    <h1 id="lastname">SECOND NUMBER ==></h1>
+    <input type="text" placeholder="Enter your second number" id="l" />
+    <br /><br />
+
+    <button onclick="halo1()">ADDITION</button>
+    <button onclick="halo2()">MULTIPLICATION</button>
+    <button onclick="halo3()">SUBSTRACT</button>
+    <button onclick="halo4()">DIVIDE</button>
+
+    <hr />
+
+    <h1>YOUR CALCULATION .....</h1>
+
+    <hr />
+
+    <h2 id="answer1"></h2>
+  </body>
+</html>
+
+<script>
+  function halo1() {
+    let a = document.getElementById("f").value;
+    let b = document.getElementById("l").value;
+    let c = +a + +b;
+    document.getElementById("answer1").innerHTML = "ADDITION ==> " + c;
+  }
+  function halo2() {
+    let a = document.getElementById("f").value;
+    let b = document.getElementById("l").value;
+    let c = +a * +b;
+    document.getElementById("answer1").innerHTML = "MULTIPLICATION ==> " + c;
+  }
+  function halo3() {
+    let a = document.getElementById("f").value;
+    let b = document.getElementById("l").value;
+    let c = +a - +b;
+    document.getElementById("answer1").innerHTML = "SUBSTRACT ==> " + c;
+  }
+  function halo4() {
+    let a = document.getElementById("f").value;
+    let b = document.getElementById("l").value;
+    let c = +a / +b;
+    document.getElementById("answer1").innerHTML = "DIVIDE ==> " + c;
+  }
+</script>

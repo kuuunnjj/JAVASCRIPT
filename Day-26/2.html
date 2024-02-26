@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Content Manipulation</title>
+  </head>
+  <style>
+    * {
+      margin: 0px;
+      padding: 0px;
+      box-sizing: border-box;
+    }
+    body {
+      background-color: black;
+      color: white;
+      margin: 100px;
+    }
+    input {
+      width: 100%;
+      height: 40px;
+      outline: none;
+      font-size: 20px;
+      margin-bottom: 30px;
+      padding: 20px;
+      margin-top: 10px;
+      border: 5px solid rgb(187, 252, 187);
+    }
+
+    input::placeholder {
+      font-size: 15px;
+    }
+    button {
+      width: 100%;
+      height: 35px;
+      border: none;
+      outline: none;
+      margin-top: 30px;
+      margin-bottom: 100px;
+      transition: 0.5s;
+      background-color: rgb(153, 225, 153);
+    }
+    button:hover {
+      cursor: pointer;
+      background-color: rgb(83, 119, 83);
+      transition: 0.5s;
+      color: white;
+    }
+    h1 {
+      color: rgb(153, 225, 153);
+    }
+    h2 {
+      color: rgb(153, 225, 153);
+      font-size: 15px;
+      margin-top: 20px;
+    }
+    hr{
+        margin-block: 15px;
+    }
+  </style>
+  <body>
+    <h1 id="firstname">FIRST NAME ==></h1>
+    <input type="text" placeholder="Enter your first name" id="f" />
+    <br /><br />
+
+    <h1 id="lastname">LAST NAME ==></h1>
+    <input type="text" placeholder="Enter your last name" id="l" />
+    <br /><br />
+
+    <button onclick="halo()">SUBMIT</button>
+
+    <hr />
+
+    <h1>VERIFY YOUR DETAILS .....</h1>
+
+    <hr />
+
+    <h2 id="answer1"></h2>
+    <h2 id="answer2"></h2>
+
+  </body>
+</html>
+
+<script type="text/javascript">
+  function halo() {
+    let a = document.getElementById("f").value;
+    let b = document.getElementById("l").value;
+
+    let ans1 = document.getElementById("answer1").innerHTML = "YOUR FIRST NAME IS ==> " + a;
+    let ans2 = document.getElementById("answer2").innerHTML = "YOUR LAST NAME IS ==> " + b;
+  }
+</script>
