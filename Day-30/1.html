@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Form</title>
+</head>
+<body>
+    <style>
+        body {
+            background-color: #f2f2f2;
+        }
+    </style>
+    
+
+    <center>
+        <form id="singUP">
+            <br><br><br>
+            <br><br><br>
+            <label for="">Name:-</label>
+            <input type="text" name="name" id="nm">
+            <br><br><br>
+            <label for="">Email:-</label>
+            <input type="text" name="name" id="em">
+            <br><br><br>
+            <label for="">Phone Number:-</label>
+            <input type="text" name="name" id="mb">
+            <br><br><br>
+             <label for="">Password:-</label>
+             <input type="text" name="name" id="ps">
+             <br><br><br>
+             <input type="submit">
+             <br><br><br>
+             <span id="err"></span>
+            
+        </form>
+    </center>
+</body>
+</html>
+<script>
+
+    document.getElementById("singUP").onsubmit = function(event) {
+        event.preventDefault();
+
+      
+
+        try{
+
+            let name = document.getElementById("nm").value
+        let Email = document.getElementById("em").value
+        let mobile = document.getElementById("mb").value
+        let password = document.getElementById("ps").value
+           if(name==="" || /\d/.test(name)){
+            throw new Error("invalid name")
+           }
+           if(!/^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/.test(Email)){
+            throw new Error("invalid email")
+           }
+
+
+           if(!/0-9/.test(mobile)){
+            throw new Error("invalid mobile number")
+           }
+
+           if(!/^(?=.\d)(?=.[a-z])(?=.[A-Z])(?=.[a-zA-Z]).{8,}$/.test(password)){
+            throw new Error("enter strong password")
+           }
+
+
+
+        }catch(e){
+            document.getElementById("err").innerHTML=e.message
+        }
+
+    }
+  
+</script>

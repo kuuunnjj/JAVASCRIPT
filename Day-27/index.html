@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>U2C3</title>
+    <link rel="stylesheet" href="index.css" />
+  </head>
+  <body>
+    <!-- Dont make any changes here -->
+    <h1>TODO App</h1>
+    <div>
+      <!-- ***** We are using form here  ****  -->
+      <form>
+        <label for="">Task Name</label><br />
+        <input id="task" type="text" placeholder="Enter Task Name" /><br />
+        <label for="">Priority </label><br />
+        <select id="priority">
+          <option value="">Select Priority</option>
+          <option value="High">High</option>
+          <option value="Low">Low</option>
+        ><br />
+        <input type="submit" onclick="todo()"/>
+      </form>
+      <table>
+        <!-- Dont change order of columns -->
+        <thead>
+          <tr>
+            <th>Task</th>
+            <th>Priority</th>
+            <th>Favourite</th>
+          </tr>
+        </thead>
+        <tbody id="add">
+        <!-- Append your output to tbody -->
+        </tbody>
+      </table>
+    </div>
+  </body>
+</html>
+
+<script>
+
+function todo(){
+    event.preventDefault();
+
+    let a = document.getElementById("task").value
+    let b = document.getElementById("priority").value
+
+    let c = document.createElement("tr")
+    let d = document.createElement("td")
+    let e = document.createElement("td")
+    let f = document.createElement("td")
+
+    d.innerHTML = a
+    e.innerHTML = b
+    f.innerHTML = "DELETE"
+
+    if(b === "High"){
+        e.style.backgroundColor = "red"
+    }
+    else{
+        e.style.backgroundColor = "green"
+    }
+
+    c.append(d)
+    c.append(e)
+    c.append(f)
+    document.getElementById("add").append(c)    
+}
+
+</script>

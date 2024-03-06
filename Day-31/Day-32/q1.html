@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <title>jQuery for form validation</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+        integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <center>
+        <form id="a">
+            <label>userName:-</label>
+            <input type="text" id="name">
+
+            <br><br><br>
+
+            <label>Email:-</label>
+            <input type="text" id="email">
+
+            <br><br><br>
+
+            <label>phone:-</label>
+            <input type="text" id="number">
+            <br><br><br>
+
+            <label>password:-</label>
+            <input type="text" id="ps">
+            <br><br><br>
+            <input type="submit">
+
+            <h1 id="ans"></h1>
+        </form>
+    </center>
+</body>
+
+</html>
+<script>
+    $(document).ready(function () {
+        $("#a").submit(function (e) {
+            e.preventDefault()
+
+            $("#ans").text("")
+
+            let n = $("#name").val()
+
+            if (n === "") {
+                $("#ans").text("please enter youre name")
+            }
+            let email = $("#email").val()
+            if (email === "") {
+                $("#ans").text("please enter youre email")
+            } else if (!email.endsWith("@gmail.com")) {
+                $("#ans").text("enter valid email")
+            }
+           
+            
+
+            let password=$("#ps").val()
+            let regixpass=/^(?=.*[A-Za-z])(?=.*\d)(?=.*[@$!%*#?&])[A-Za-z\d@$!%*#?&]{8,}$/
+
+            if(!regixpass.test(password)){
+                $("#ans").text("enter valid  password")
+            }
+
+            let number=$("#number").val()
+            let regixmob=/^\d/
+
+            if(number===""){
+                $("#ans").text("enter valid number")
+            }else if(regixmob.test(number)){
+                $("#ans").text("enter 10 digits  number")
+            }
+        })
+    })
+
+
+</script>

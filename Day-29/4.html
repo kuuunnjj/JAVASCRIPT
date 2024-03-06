@@ -1,0 +1,46 @@
+<!-- **Question 4: Division by Negative Number**
+Write a JavaScript function that takes two numbers as parameters. If the second number is less than 0, throw an error with the message "Number not divisible by 0". -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <center>
+      <br /><br />
+      <label>FIRST VALUE : </label>
+      <input type="number" id="in1" />
+      <br />
+      <br />
+      <label>SECOND VALUE : </label>
+      <input type="number" id="in2" />
+      <br />
+      <br />
+      <button onclick="check2()">SUBMIT</button>
+      <br />
+      <p id="ans"></p>
+    </center>
+  </body>
+</html>
+
+<script>
+  function check(e2) {
+    if (e2 < 0) {
+      throw new Error("Number not divisible by 0");
+    }
+  }
+
+  function check2() {
+    var e2 = document.getElementById("in2").value;
+
+    try {
+      check(e2);
+      a = document.getElementById("ans").innerHTML = "Number divisible !";
+    } catch (e) {
+      document.getElementById("ans").innerHTML = e.message;
+    }
+  }
+</script>
