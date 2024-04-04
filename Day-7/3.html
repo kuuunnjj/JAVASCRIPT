@@ -1,0 +1,35 @@
+<!-- **Question 3:**
+
+**Title:** Weather Check
+
+**Description:** Write a JavaScript program that uses two boolean variables `isSunny` and `isWarm`. The program should check if either of these variables is true and display the appropriate message:
+- If either `isSunny` or `isWarm` is true, console.log("It's either sunny or warm (or both).").
+- If both `isSunny` and `isWarm` are false, console.log("It's neither sunny nor warm."). -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <center>
+      <br /><br /><br />
+      <h1 id="ans"></h1>
+    </center>
+  </body>
+</html>
+
+<script>
+    let s = flase
+    let w = flase
+
+    if(s == true || w == true){
+        document.getElementById("ans").innerHTML = "sunny or warm"
+    }
+    else{
+        document.getElementById("ans").innerHTML = "sunny not warm"
+    }
+</script>

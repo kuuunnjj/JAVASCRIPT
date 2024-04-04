@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Countdown</title>
+  </head>
+  <style>
+    .main {
+      width: 100%;
+      display: flex;
+      justify-content: space-evenly;
+      height: 97vh;
+      align-items: center;
+      background-color: rgb(251, 255, 192);
+
+    }
+    .main .box {
+      width: 16%;
+      /* border: 1px solid; */
+      height: 300px;
+      display: flex;
+      flex-direction: column;
+      border-radius: 20px;
+      justify-content: center;
+      align-items: center;
+      cursor: pointer;
+      box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+    }
+    h1{
+        text-align: center;
+    }
+    img{
+        width: 80px;
+    }
+
+  </style>
+  <body>
+    <div class="main">
+      <div class="box">
+        
+          <img src="property.png" alt="" />
+          <h4>Real Estate</h4>
+          <h1 id="a">1</h1>
+       
+      </div>
+
+      <div class="box">
+          <img src="graphic-design.png" alt="" />
+          <h4>Books</h4>
+          <h1 id="b">1</h1>
+      </div>
+
+      <div class="box">
+          <img src="sofa.png" alt="" />
+          <h4>Furniture</h4>
+          <h1 id="c">1</h1>
+      </div>
+
+      <div class="box">
+          <img src="enlargement.png" alt="" />
+          <h4>Electric</h4>
+          <h1 id="d">1</h1>
+      </div>
+
+      <div class="box">
+          <img src="electric-car.png" alt="" />
+          <h4>Car</h4>
+          <h1 id="e">1</h1>
+      </div>
+
+      <div class="box">
+          <img src="application.png" alt="" />
+          <h4>Other</h4>
+          <h1 id="f">1</h1>
+      </div>
+    </div>
+  </body>
+</html>
+<script>
+  let a = document.getElementById("a");
+  let b = document.getElementById("b");
+  let c = document.getElementById("c");
+  let d = document.getElementById("d");
+  let e = document.getElementById("e");
+  let f = document.getElementById("f");
+
+  let count=0,count1=0,count2=0,count3=0,count4=0,count5= 0
+  let stop,stop1,stop2,stop3,stop4,stop5
+
+  stop = setInterval(()=>{
+      count+=10
+      a.innerHTML = count
+      if(count>=3921){
+          clearInterval(stop)
+      }
+  },0)
+
+  stop1 = setInterval(()=>{
+      count1+=10
+      b.innerHTML = count1
+      if(count1>=398){
+          clearInterval(stop1)
+      }
+  },0)
+
+  stop2 = setInterval(()=>{
+      count2+=10
+      c.innerHTML = count2
+      if(count2>=1229){
+          clearInterval(stop2)
+      }
+  },0)
+
+  stop3 = setInterval(()=>{
+      count3+=50
+      d.innerHTML = count3
+      if(count3>=32891){
+          clearInterval(stop3)
+      }
+  },0)
+
+  stop4 = setInterval(()=>{
+      count4+=50
+      e.innerHTML = count4
+      if(count4>=29221){
+          clearInterval(stop4)
+      }
+  },0)
+  stop5 = setInterval(()=>{
+      count5+=10
+      f.innerHTML = count5
+      if(count5>=219){
+          clearInterval(stop5)
+      }
+  },0)
+  
+</script>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+</html>
+<script>
+    Array.prototype.ashish=function(cb){
+        let b=[];
+        for(let i=0;i<this.length;i++){
+           if(cb(this[i])){
+            b.push(cb(this[i]))
+           }
+        }
+        return b
+    }
+
+
+    let arr=[1,2,3,4,5,6,7,8,9,10]
+     let a=arr.ashish((el)=>{
+        if(el<10){
+            return el
+        }
+     })
+     console.log(a);
+
+</script>

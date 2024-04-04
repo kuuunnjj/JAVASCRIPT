@@ -1,0 +1,44 @@
+<!-- **Question 1: Email Validation**
+Write a JavaScript function that takes an email string as a parameter. If the email string does not contain the "@" symbol, throw an error with the message "Email should have @". -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <center>
+      <br /><br />
+      <label>EMAIL : </label>
+      <input type="text" id="in" placeholder="Enter your email here" />
+      <br />
+      <br />
+      <button onclick="check2()">SUBMIT</button>
+      <br />
+      <p id="ans"></p>
+    </center>
+  </body>
+</html>
+
+<script>
+  function check(email) {
+    if (email === "") {
+      throw new Error("Enter your email address");
+    }
+    if (!email.includes("@gmail.com")) {
+      throw new Error("Please enter a valid email address");
+    }
+  }
+
+  function check2() {
+    try {
+      var email = document.getElementById("in").value;
+      check(email);
+      let a = (document.getElementById("ans").innerHTML = "VALID !");
+    } catch (e) {
+      document.getElementById("ans").innerHTML = e.message;
+    }
+  }
+</script>

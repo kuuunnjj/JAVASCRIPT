@@ -1,0 +1,39 @@
+<!-- **Question 1: Count Vowels using String Functions**
+
+Write a JavaScript function that takes a string as input and uses string functions to count the number of vowels (a, e, i, o, u) in the input string. The function should return the count of vowels and print the result.
+
+Example Input: "Hello World"
+Example Output: Number of vowels: 3 -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <center>
+        <br><br><br>
+        <h1>ENTER ANY STRING ==> </h1>
+        <input type="text" id="ans">
+        <br><br>
+        <h1 id="answer"></h1>
+    </center>
+</body>
+</html>
+
+<script>
+    let a = document.getElementById("ans").value
+    var count = 0
+   
+        for(let i = 0; i < a.length; i++){
+            if(a.charAt(i) == "a" || a.charAt(i) == "e" || a.charAt(i) == "i" || a.charAt(i) == "o" || a.charAt(i) == "u")
+            {
+                count++;
+            }
+        }
+        document.getElementById("answer").innerHTML = "Number of vowels ==> " + count 
+        console.log(count);
+
+</script>

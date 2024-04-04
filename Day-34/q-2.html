@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+</html>
+<script>
+    class automobile{
+        constructor(wheel,seat) {
+        this.wheel=wheel
+        this.seat=seat
+        }
+    }
+    class electric extends automobile{
+        constructor(wheel,seat,beatry){
+        super(wheel,seat)
+        this.beatry = beatry
+        }
+    }
+    let a = new automobile(4,5)
+    console.log(a)
+
+    let b = new electric(4,7,300)
+    console.log(b)
+
+
+</script>

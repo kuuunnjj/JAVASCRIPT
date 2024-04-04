@@ -1,0 +1,57 @@
+<!-- **Question 2:**
+
+**Title:** Calculator
+
+**Description:** Create a JavaScript program that takes three variables: `number1`, `number2`, and `operator`. Using a `switch-case` statement, perform a mathematical operation based on the value of `operator`. Handle the following cases:
+- If `operator` is "+", add `number1` and `number2` and console.log the result.
+- If `operator` is "-", subtract `number2` from `number1` and console.log the result.
+- If `operator` is "*", multiply `number1` and `number2` and console.log the result.
+- If `operator` is "/", divide `number1` by `number2` and console.log the result.
+- For any other value of `operator`, console.log("Invalid operator"). -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <center>
+        <br><br><br>
+        <label>ENTER THE OPERATOR : </label>
+        <input type="text" id="op">
+        <br><br>
+        <label>ENTER FIRST VALUE : </label>
+        <input type="text" id="v1">
+        <br><br>
+        <label>ENTER SECOND VALUE : </label>
+        <input type="text" id="v2">
+        <br><br>
+        <h1 id="ans"></h1>
+    </center>
+</body>
+</html>
+
+<script>
+    let a = document.getElementById("op").value
+    let b = document.getElementById("v1").value
+    let c = document.getElementById("v2").value
+
+    switch(a){
+        case "+" : document.getElementById("ans").innerHTML = "SUM IS "+ (+b + +c)
+        console.log("SUM IS "+ (+b + +c))
+        break
+        case "-" : document.getElementById("ans").innerHTML = "SUBSTRACT IS "+ (+b - +c)
+        console.log("SUBSTRACT IS "+ (+b - +c))
+        break
+        case "*" : document.getElementById("ans").innerHTML = "MULTIPLICATION IS "+ (+b * +c)
+        console.log("MULTIPLICATION IS "+ (+b * +c))
+        break
+        case "/" : document.getElementById("ans").innerHTML = "DIVISION IS "+ (+b / +c)
+        console.log("DIVISION IS "+ (+b / +c))
+        break
+        default : document.getElementById("ans").innerHTML = "ENTER VALUES"
+        break
+    }
+</script>

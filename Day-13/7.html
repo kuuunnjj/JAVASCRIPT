@@ -1,0 +1,40 @@
+<!-- Q7. Take a variable darkMode if true print "ON" or just print "OFF" -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <center>
+      <br /><br /><br />
+      <label>ENTER THE VALUE : </label>
+      <input type="text" id="in" />
+      <br /><br />
+      <h1 id="ans"></h1>
+      <br /><br /><br />
+    </center>
+  </body>
+</html>
+
+<script>
+    function hi() {
+    let a = document.getElementById("in").value;
+
+    if (a == "") {
+      document.getElementById("ans").innerHTML = "ENTER VALUE !";
+    } else {
+      if (a == "true") {
+        console.log("ON !");
+        document.getElementById("ans").innerHTML = "ON !";
+      } else {
+        console.log("OFF !");
+        document.getElementById("ans").innerHTML = "OFF !";
+      }
+    }
+  }
+
+  hi();
+</script>

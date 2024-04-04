@@ -1,0 +1,6 @@
+console.log("HELLOWW !")
+console.log("NAME : KUNJ GAMI")
+console.log("AGE : 20 YEARS")
+console.log("FAVOURITE SUBJECT : SCIENCE")
+console.log("CITY : JUNAGADH")
+console.log("BYE")

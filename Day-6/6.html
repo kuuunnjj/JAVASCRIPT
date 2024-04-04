@@ -1,0 +1,30 @@
+<!-- You are provided with three variables:
+   - `cpw` (current password): This variable holds the current password.
+   - `stpw` (stored password): This variable holds the stored password. -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <center>
+        <br><br><br>
+        <h1 id="ans"></h1>
+    </center>
+</body>
+</html>
+
+<script>
+    let a = "kunj8598"
+    let b = prompt("ENTER YOUR PASSWORD : ")
+
+    if(a === b){
+        document.getElementById("ans").innerHTML = "LOG IN !"
+    }
+    else{
+        document.getElementById("ans").innerHTML = "INVALID !"
+    }
+</script>

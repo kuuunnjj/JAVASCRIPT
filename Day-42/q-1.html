@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title></head
+  ><style>
+    #main {
+      display: flex;
+      justify-content: space-evenly;
+      text-align: center;
+      margin-top: 50px;
+    }
+    img {
+      width: 80%;
+      height: 60%;
+    }
+    p {
+      color: red;
+    }
+    h4 {
+      color: green;
+    }
+    #cart{
+      display: flex;
+      justify-content:center;
+      margin-top: 50px;
+    }
+  </style>
+
+  <body>
+    <div id="main"></div>
+    <div id="cart">
+      <select name="" id="select">
+        <option value="low">low-high</option>
+        <option value="high">high-low</option>
+        <option value="az">az</option>
+        <option value="za">za</option>
+      </select>
+    </div>
+  </body>
+</html>
+<script>
+  let btn = document.createElement("button");
+  btn.innerHTML = "Cart";
+  document.getElementById("cart").append(btn);
+
+  btn.addEventListener("click", function () {
+    window.open("cart.html");
+  });
+
+  let arr = [
+    {
+      id: 1,
+      discription: "A first product",
+      price: 250,
+      Image: "https://rukminim2.flixcart.com/image/312/312/xif0q/monitor/w/2/f/cb282k-uhd-28-2023-um-pb2ss-001-acer-original-imagqhefn3jq85kp.jpeg?q=70",
+    },
+    {
+      id: 2,
+      discription: "aalpha bag",
+      price: 240,
+      Image: "https://rukminim2.flixcart.com/image/312/312/xif0q/monitor/f/0/f/-original-imagwwcxv9cqds7d.jpeg?q=70",
+    },
+    {
+      id: 3,
+      discription: "bag of traveling",
+      price: 200,
+      Image: "https://rukminim2.flixcart.com/image/312/312/xif0q/monitor/a/z/9/-original-imagsathhfzrr2wh.jpeg?q=70",
+    },
+    {
+      id: 4,
+      discription: "this is a our product",
+      price: 150,
+      Image: "https://rukminim2.flixcart.com/image/312/312/xif0q/monitor/r/h/k/ed320qx-full-hd-31-5-2021-um-je0si-x01-acer-original-imagxffbs73ge2vh.jpeg?q=70",
+    },
+  ];
+
+  function view(arr) {
+    arr.map((el, index) => {
+      let first = document.createElement("div");
+
+      let Image = document.createElement("img");
+      Image.setAttribute("src", el.Image);
+
+      let discription = document.createElement("p");
+      discription.innerHTML = el.discription;
+
+      let price = document.createElement("h4");
+      price.innerHTML = el.price;
+
+      let add = document.createElement("button");
+      add.innerHTML = "Add To Cart";
+
+      add.addEventListener("click", function () {
+        addcart(arr, index);
+      });
+
+      first.append(Image, discription, price, add);
+      document.getElementById("main").append(first);
+    });
+  }
+  view(arr);
+
+  let select = document.getElementById("select")
+  select.addEventListener("change",function(){
+    document.getElementById("main").innerHTML = ""
+
+    let selectValue = select.value
+    let selectedArr = []
+
+    if (selectValue === "low") {
+      selectedArr = arr.slice().sort((a,b)=>a.price - b.price)
+    }
+    else if(selectValue === "high"){
+      selectedArr = arr.slice().sort((a,b)=>b.price - a.price)
+    }
+    else if(selectValue === "az"){
+      selectedArr = arr.slice().sort((a,b)=>a.discription.localeCompare(b.discription))
+    }
+    else if(selectValue === "za"){
+      selectedArr = arr.slice().sort((a,b)=>b.discription.localeCompare(a.discription)) 
+    }
+    view(selectedArr)
+  })
+
+  function addcart(arr, index) {
+    let product = arr[index];
+    let products = JSON.parse(localStorage.getItem("open")) || [];
+    products.push(product);
+    localStorage.setItem("open", JSON.stringify(products));
+  }
+</script>

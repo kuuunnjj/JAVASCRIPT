@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    *{
+        background-color: black;
+        color: white;
+    }
+    #displayShow{
+        width: 100%;
+        margin-top: 10%;
+        display: flex;
+        justify-content: space-evenly;
+    }
+    img{
+        width: 100%;
+        border-radius: 10px;
+    }
+    div{
+        width: 30%;
+    }
+</style>
+<body>
+    <div id="displayShow">
+
+    </div>
+
+    <script>
+        let data = [
+            {
+                id: 1,
+                title: "MACBOOK AIR 2020",
+                image: "https://m.media-amazon.com/images/I/71jG+e7roXL._AC_UF1000,1000_QL80_.jpg",
+                price: 80000,
+            },
+            {
+                id: 2,
+                title: "MACBOOK AIR 2020",
+                image: "https://m.media-amazon.com/images/I/71jG+e7roXL._AC_UF1000,1000_QL80_.jpg",
+                price: 80000,
+            },
+            {
+                id: 3,
+                title: "MACBOOK AIR 2020",
+                image: "https://m.media-amazon.com/images/I/71jG+e7roXL._AC_UF1000,1000_QL80_.jpg",
+                price: 80000,
+            },
+        ]
+
+        function display(data) {
+            data.map((el) => {
+                let first = document.createElement("div");
+
+                let imgofmac = document.createElement("img");
+                imgofmac.setAttribute("src", el.image);
+
+                let title = document.createElement("h1");
+                title.innerHTML = el.title;
+
+                let price = document.createElement("p");
+                price.innerHTML = el.price;
+
+                first.append(imgofmac, title, price);
+
+                document.getElementById("displayShow").appendChild(first);
+            });
+        }
+        display(data);
+    </script>
+</body>
+</html>

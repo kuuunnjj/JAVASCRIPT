@@ -1,0 +1,1 @@
+document.write("<h1 style=text-align:center;>Welcome to my website</h1>")

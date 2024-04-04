@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    *{
+        background-color: black;
+        color: white;
+    }
+    #displayShow{
+        width: 100%;
+        margin-top: 5%;
+        display: flex;
+        justify-content: space-evenly;
+    }
+    img{
+        width: 100%;
+        border-radius: 10px;
+    }
+    div{
+        width: 30%;
+    }
+    button{
+        background-color: white;
+        border: none;
+        width: 40%;
+        height: 30px;
+        color: black;
+        border-radius: 2px;
+        cursor: pointer;
+    }
+    #cartbtn{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        margin-top: 50px;
+    }
+    #cartbtn button{
+        width: 200px;
+    }
+</style>
+<body>
+
+    <div id="cartbtn">
+        <!-- <button>Go to cart</button> -->
+    </div>
+
+    <div id="displayShow">
+       
+    </div>
+
+    <script>
+
+        let cartbtn1 = document.createElement("button")
+        cartbtn1.innerHTML = "Go to cart"
+        document.getElementById("cartbtn").append(cartbtn1)
+        cartbtn1.addEventListener("click",function(){
+            window.open("2.html")
+        })
+
+
+        let data = [
+            {
+                id: 1,
+                title: "MACBOOK AIR 2020",
+                image: "https://m.media-amazon.com/images/I/71jG+e7roXL._AC_UF1000,1000_QL80_.jpg",
+                price: 80000,
+            },
+            {
+                id: 2,
+                title: "MACBOOK AIR 2020",
+                image: "https://m.media-amazon.com/images/I/71jG+e7roXL._AC_UF1000,1000_QL80_.jpg",
+                price: 80000,
+            },
+            {
+                id: 3,
+                title: "MACBOOK AIR 2020",
+                image: "https://m.media-amazon.com/images/I/71jG+e7roXL._AC_UF1000,1000_QL80_.jpg",
+                price: 80000,
+            },
+        ]
+
+        function display(data) {
+            data.map((el,index) => {
+                let first = document.createElement("div");
+
+                let imgofmac = document.createElement("img");
+                imgofmac.setAttribute("src", el.image);
+
+                let title = document.createElement("h1");
+                title.innerHTML = el.title;
+
+                let price = document.createElement("p");
+                price.innerHTML = el.price;
+
+                let addtocartbtn = document.createElement("button");
+                addtocartbtn.innerHTML = "ADD TO CART";
+                
+                addtocartbtn.addEventListener("click",function(){
+                    addproduct(data,index)
+                })
+
+                first.append(imgofmac, title, price, addtocartbtn);
+
+                document.getElementById("displayShow").appendChild(first);
+
+
+            });
+        }
+        display(data);
+
+        function addproduct(data,index){
+            let product = data[index]
+            let products = JSON.parse(localStorage.getItem("open")) || []
+            products.push(product)
+            localStorage.setItem("open",JSON.stringify(products))
+        }
+
+        
+    </script>
+</body>
+</html>

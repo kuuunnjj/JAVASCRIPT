@@ -1,0 +1,52 @@
+<!-- **Question 1:**
+
+**Title:** Number Categorization
+
+**Description:** Write a JavaScript program that uses an "if-else ladder" in combination with logical operators to categorize a given number into different ranges and display a corresponding message. Follow these rules:
+- If the number is less than 10, console.log("The number is less than 10.").
+- If the number is between 10 and 20 (inclusive), console.log("The number is between 10 and 20.").
+- If the number is between 20 and 30 (inclusive), console.log("The number is between 20 and 30.").
+- If the number is greater than 30, console.log("The number is greater than 30."). -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <center>
+      <br /><br /><br />
+      <label>ENTER VALUE : </label>
+      <input type="text" id="b" />
+      <br /><br /><br />
+      <h1 id="ans"></h1>
+    </center>
+  </body>
+</html>
+
+<script>
+  let a = document.getElementById("b").value;
+
+  if (a == "") {
+    document.getElementById("ans").innerHTML = "ENTER VALUE !";
+  } else {
+    if (a <= 10) {
+      console.log("The number is less than 10.");
+      document.getElementById("ans").innerHTML = "The number is less than 10.";
+    } else if (a > 10 && a <= 20) {
+      console.log("The number is between 10 and 20.");
+      document.getElementById("ans").innerHTML =
+        "The number is between 10 and 20.";
+    } else if (a > 20 && a <= 30) {
+      console.log("The number is between 20 and 30.");
+      document.getElementById("ans").innerHTML =
+        "The number is between 20 and 30.";
+    } else {
+      console.log("The number is greater than 30.");
+      document.getElementById("ans").innerHTML =
+        "The number is greater than 30.";
+    }
+  }
+</script>

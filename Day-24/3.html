@@ -1,0 +1,45 @@
+<!-- ### Question 3: Book Inventory Management
+
+You are building a simple book inventory management system. You have an array of book objects, each containing information about the book: `title`, `author`, `price`, and `quantityAvailable`.The function should return an array of books that can be purchased within the given budget 60 also should be available . If no books are affordable, return an empty array. -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+</html>
+
+<script>
+    let library = [
+        {
+            title: "The Lord of the Rings",
+            author: "king",
+            price: 22.99,
+            quantityAvailable: 0
+        },
+        {
+            title: "how far",
+            author: "sikha",
+            price: 58,
+            quantityAvailable: 2
+        },
+        {
+            title: "all we have is now",
+            author: "jhon",
+            price: 50,
+            quantityAvailable: 5
+        }
+    ]
+
+
+    let total = [] = library.filter((el) => {
+     return el.price < 60 && el.quantityAvailable > 0
+    })
+    console.log(total)
+
+</script>

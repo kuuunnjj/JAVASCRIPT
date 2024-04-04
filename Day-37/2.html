@@ -1,0 +1,71 @@
+<!-- **Task 2: Create 2 Modals**
+
+Design a modal window that displays additional content when triggered by a button click. The modal should appear in the center of the screen and should have a close button to dismiss it. -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <style>
+    * {
+      margin: 0px;
+      padding: 0px;
+      box-sizing: border-box;
+      background-color: black;
+    }
+    button {
+      width: 200px;
+      height: 50px;
+      background-color: lightyellow;
+      cursor: pointer;
+      margin-left: 42%;
+      margin-top: 30px;
+      border: none;
+      border-top-left-radius: 18px;
+      border-top-right-radius: 2px;
+      border-bottom-left-radius: 2px;
+      border-bottom-right-radius: 18px;
+    }
+    .box {
+      width: 100%;
+      height: 400px;
+      background-color: lightyellow;
+      margin-top: 30px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-family: Verdana, Geneva, Tahoma, sans-serif;
+      display: none;
+      cursor: pointer;
+    }
+    .box h1 {
+      background-color: transparent;
+      color: black;
+    }
+  </style>
+  <body>
+    <button onclick="Opennow()">Click here</button>
+
+    <div class="box" id="boxwork" onclick="Closenow()">
+      <h1>HEY !</h1>
+    </div>
+  </body>
+</html>
+
+<script>
+  let a = document.getElementById("boxwork");
+  function Opennow() {
+    boxwork.style.display = "flex";
+    // setTimeout(closeBox,1000)
+  }
+  function closeBox() {
+    boxwork.style.display = "none";
+  }
+
+  function Closenow() {
+    boxwork.style.display = "none";
+  }
+</script>

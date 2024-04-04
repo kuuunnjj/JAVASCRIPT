@@ -1,0 +1,39 @@
+<!-- 3. Create a function that concatenates two strings passed as arguments and returns the resulting string. -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <center>
+        <br><br><br>
+        <label>ENTER FIRST STRING : </label>
+        <input type="text" id="in1">
+        <br><br>
+        <label>ENTER SECOND STRING : </label>
+        <input type="text" id="in2">
+        <br><br>
+        <h1 id="ans"></h1>
+        <br><br><br>
+    </center>
+</body>
+</html>
+
+<script>
+    a = document.getElementById("in1").value
+    b = document.getElementById("in2").value
+
+    if(a == "" || b == ""){
+        document.getElementById("ans").innerHTML = "ENTER VALUES!"
+    }
+    else{
+        function sum(x,y){
+            console.log(x + y)
+            document.getElementById("ans").innerHTML = x + "&nbsp" + y
+        }
+        sum(a,b)
+    }
+</script>

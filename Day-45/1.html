@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    *{
+        margin: 0px;
+        padding: 0px;
+        box-sizing: border-box;
+    }
+    .divstyle{
+        width: 20%;
+        height: 300px;
+        border: 10px solid black;
+    }
+    .imgstyle{
+        width: 100%;
+        height: 70%;
+        object-fit: cover;
+    }
+    #main{
+        display: flex;
+        flex-wrap: wrap;
+    }
+</style>
+<body>
+    <div id="main"></div>
+</body>
+</html>
+
+<script>
+    async function jsondataapi(){
+        let data = await fetch("https://api.sampleapis.com/cartoons/cartoons2D")
+        let res = await data.json()
+        console.log(res)
+        display(res)
+    }
+    jsondataapi()
+
+    function display(res){
+         res.map((el)=>{
+            let component = document.createElement("div")
+            component.setAttribute("class","divstyle")
+
+            let image = document.createElement("img")
+            image.setAttribute("src",el.image)
+            image.setAttribute("class","imgstyle")
+
+            let title = document.createElement("h1")
+            title.innerHTML = el.title
+
+            component.append(image,title)
+            document.getElementById("main").append(component)
+        })
+    }
+    
+</script>

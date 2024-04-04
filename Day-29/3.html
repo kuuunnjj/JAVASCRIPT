@@ -1,0 +1,42 @@
+<!-- **Question 3: Voting Eligibility**
+Write a JavaScript function that takes a number representing age as a parameter. If the number is less than 18, throw an error with the message "Not eligible to vote".a -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <center>
+      <br /><br />
+      <label>AGE : </label>
+      <input type="number" id="in" placeholder="Enter your age" />
+      <br />
+      <br />
+      <button onclick="check2()">SUBMIT</button>
+      <br />
+      <p id="ans"></p>
+    </center>
+  </body>
+</html>
+
+<script>
+  function check(email) {
+    if (email < 18) {
+      throw new Error("Can't vote !");
+    }
+  }
+
+  function check2() {
+    var email = document.getElementById("in").value;
+
+    try {
+      check(email);
+      a = document.getElementById("ans").innerHTML = "you can vote !";
+    } catch (e) {
+      document.getElementById("ans").innerHTML = e.message;
+    }
+  }
+</script>

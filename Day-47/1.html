@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    *{
+        margin: 0px;
+        box-sizing: border-box;
+        background-color: black;
+        color: white;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+    }
+    input{
+        width: 89%;
+        height: 50px;
+        padding-left: 20px;
+        border: 1px solid white;
+        margin-top: 20px;
+    }
+    button{
+        width: 10%;
+        height: 50px;
+        background-color: white;
+        color: black;
+        border: none;
+        margin-top: 20px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .box{
+        display: flex;
+        padding-inline: 50px;
+    }
+    #main{
+        padding-inline: 50px;
+        margin-top: 50px;
+    }
+</style>
+<body>
+    <div class="box">
+        <input type="text" id="Search" placeholder="Enter city...">
+        <button onclick="weather_Data()">Search</button>
+    </div>
+   
+
+    <div id="main"></div>
+</body>
+</html>
+<script>
+    function weather_Data(){
+
+        let key_Value = "11474a6a10abff0f1e1f5f0efee03105"
+        let city_Name = document.getElementById("Search").value
+
+        fetch(`https://api.openweathermap.org/data/2.5/weather?&q=${city_Name}&appid=${key_Value}`)
+        .then(function(response){
+            return response.json()
+        })
+        .then(function(json){
+            console.log(json)
+            display(json)
+        })
+    }
+
+    function display(json){
+
+        document.getElementById("main").innerHTML = ""
+
+        let component = document.createElement("div")
+
+        let Hum = document.createElement("p")
+        Hum.innerHTML = "Humidity : " + json.main.humidity
+
+        let Max_tem = document.createElement("p")
+        Max_tem.innerHTML = "Max Temprature : " + json.main.temp_max
+
+        let Min_tem = document.createElement("p")
+        Min_tem.innerHTML = "Min Temprature : " + json.main.temp_min
+
+        let Wind_speed = document.createElement("p")
+        Wind_speed.innerHTML = "Wind Speed : " + json.wind.speed
+
+        component.append(Hum,Max_tem,Min_tem,Wind_speed)
+
+        document.getElementById("main").append(component)
+        
+
+    }
+   
+</script>

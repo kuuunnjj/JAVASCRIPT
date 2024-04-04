@@ -1,0 +1,71 @@
+<!-- Find a suitable website create a login, sign up page and home page -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    *{
+        margin: 0px;
+        padding: 0px;
+        box-sizing: border-box;
+        background-color: black;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+    }
+    input{
+        background-color: transparent;
+        color: white;
+        border: none;
+        border-bottom: 2px solid white;
+        width: 60%;
+        height: 60px;
+        outline: none;
+    }
+    input::placeholder{
+        color: rgba(255, 255, 255, 0.427);
+    }
+    h1{
+        color: white;
+        margin-block: 50px;
+    }
+    button{
+        width: 60%;
+        background-color: white;
+        color: black;
+        border: none;
+        height: 40px;
+        margin-top: 40px;
+        cursor: pointer;
+    }
+</style>
+<body>
+    <center>
+        <h1>Sign Up</h1>
+        <form id="signUpForm">
+            <input type="text" id="firstName" placeholder="Enter your first name"> <br>
+            <input type="text" id="lastName" placeholder="Enter your last name"> <br>
+            <input type="text" id="email" placeholder="Enter your email"> <br>
+            <input type="password" id="password" placeholder="Enter your password"> <br>
+            <button type="submit">Create Now</button>
+        </form>
+    </center>
+</body>
+</html>
+<script>
+    let signUpDetails = document.getElementById("signUpForm")
+    signUpDetails.addEventListener("submit",function(event){
+        event.preventDefault()
+
+        let sFirstName = document.getElementById("firstName").value
+        let sLastName = document.getElementById("lastName").value
+        let sEmail = document.getElementById("email").value
+        let sPassword = document.getElementById("password").value
+
+        let StoreSignupData = JSON.parse(localStorage.getItem("SignupKey")) || []
+        StoreSignupData.push({sFirstName,sLastName,sEmail,sPassword})
+        localStorage.setItem("SignupKey",JSON.stringify(StoreSignupData))
+    })
+</script>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <input type="text" id="search">
+    <button onclick="moviee()">Search</button>
+
+    <div id="main"></div>
+  </body>
+</html>
+
+<script>
+  function moviee(){
+
+    let Key = "491e036a"
+    let Movie_Name = document.getElementById("search").value
+
+    fetch(`http://www.omdbapi.com/?apikey=${Key}&t=${Movie_Name}`)
+    .then(function(response){
+        return response.json()
+    })
+    .then(function(json){
+        console.log(json)
+        display(json)
+    })
+  }
+
+  function display(json){
+
+    document.getElementById("main").innerHTML = ""
+
+    let component = document.createElement("div")
+
+    let img = document.createElement("img")
+    img.setAttribute("src",json.Poster)
+
+    let name = document.createElement("h1")
+    name.innerHTML = json.Title
+
+    component.append(img,name)
+
+    document.getElementById("main").append(component)
+
+}
+</script>

@@ -1,0 +1,39 @@
+<!-- 2. Create a program that generates the Fibonacci sequence up to a certain number 'n' using loops. -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <center>
+        <br /><br /><br />
+        <label>ENTER THE N NUMBER OF LOOP: </label>
+        <input type="text" id="in" />
+        <br /><br />
+        <h1>FIBONACCI SERIES ==></h1>
+        <br /><br /><br />
+    </center>
+</body>
+</html>
+
+<script>
+    let a = document.getElementById("in").value
+
+    let b = -1
+    let c = 1
+    let d
+
+    for(let i = 1; i <= a; i++){
+                
+        d = b + c
+        b = c
+        c = d
+
+        console.log(d)
+        document.write("<center>" + d + "</center>" + "<br>")
+        
+    }
+</script>

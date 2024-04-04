@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Birthday Wish</title>
+</head>
+<style>
+    #main{
+        width: 500px;
+        height: 500px;
+        border-radius: 50%;
+        background-color: rgb(251, 255, 192);
+        margin-top: 100px;
+        color: black;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 80px;
+        box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+    }
+    #first{
+        width: 600px;
+        height: 300px;
+        background-color: rgb(251, 255, 192);
+        font-size: 35px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 20px;
+        margin-top: 100px;
+        display: none;
+        box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+    }
+</style>
+<body>
+   <center>
+    <div id="main">
+        <h1 id="a">5</h1>
+    </div>
+    <div id="first">
+        <h1>Happy Birthday</h1>
+    </div>
+   </center>
+</body>
+</html>
+<script>    
+let a = document.getElementById("a")
+let count = 5
+let stop
+
+stop = setInterval(()=>{
+    count -- 
+    a.innerHTML = count
+    if(count==0){
+        clearInterval(stop)
+        document.getElementById("first").style.display = "flex"
+        document.getElementById("main").style.display = "none"
+    }
+},500)
+</script>

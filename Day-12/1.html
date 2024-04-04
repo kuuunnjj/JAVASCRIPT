@@ -1,0 +1,72 @@
+<!-- 1. 
+Write a JavaScript program to handle reception logic. Prompt the user to enter the number of guests attending the reception. Implement the following logic:
+
+- If the number of guests is 0, print in the console: "It seems like no one is attending the reception. Are you sure?"
+- If the number of guests is 1, print: "Great! There is one guest attending the reception."
+- If the number of guests is 2, print: "Perfect! You and one other person will be attending the reception."
+- If the number of guests is more than 2, print the number of guests and "guests will be attending the reception."
+- If the input is invalid (not a number or negative number), print: "Invalid input. Please enter a valid number of guests."
+
+After determining the number of guests, run a loop for the number of guests present and print: "Thank you, guest #[guestNumber], for attending the reception!" During this loop, skip thanking guests if their number is 3. -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <center>
+      <br /><br /><br />
+      <label>ENTER THE NUMBER OF GUESTS : </label>
+      <input type="text" id="in" />
+      <br /><br />
+      <h1 id="ans"></h1>
+      <br /><br /><br />
+    </center>
+  </body>
+</html>
+
+<script>
+  let a = document.getElementById("in").value
+
+  if (a == "") {
+    document.getElementById("ans").innerHTML = "ENTER VALUES !!"
+  } else {
+    if (a == 0) {
+      document.getElementById("ans").innerHTML =
+        "It seems like no one is attending the reception. Are you sure?"
+      console.log(
+        "It seems like no one is attending the reception. Are you sure?"
+      );
+    } else if (a == 1) {
+      document.getElementById("ans").innerHTML =
+        "Great! There is one guest attending the reception."
+      console.log("Great! There is one guest attending the reception.")
+    } else if (a == 2) {
+      document.getElementById("ans").innerHTML =
+        "Perfect! You and one other person will be attending the reception."
+      console.log(
+        "Perfect! You and one other person will be attending the reception."
+      );
+    } else if (a > 2) {
+      document.getElementById("ans").innerHTML =
+        "guests will be attending the reception."
+      console.log("guests will be attending the reception.")
+    } else {
+      document.getElementById("ans").innerHTML =
+        "Invalid input. Please enter a valid number of guests."
+      console.log("Invalid input. Please enter a valid number of guests.")
+    }
+
+    for (let i = 1; i <= a; i++) {
+      if (i == 3) {
+        continue
+      }
+      document.write("<center>" + "THANK UH ! GUEST NUMBER ==>" + i + "<br>" + "</center>")
+      console.log("THANK UH ! GUEST NUMBER ==>" + i)
+      
+    }
+  }
+</script>

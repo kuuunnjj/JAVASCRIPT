@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> custom filter function</title>
+</head>
+<body>
+    
+</body>
+</html>
+<script>
+
+    Array.prototype.Myfilter=function(cb){
+     let newarr=[];
+     for(let i=0; i<this.length;i++){
+        if(cb(this[i])){
+           newarr.push(cb(this[i]))
+        }  
+     }
+     return newarr;
+    }
+    
+
+let arr=[1,2,3,4,5,6,7,8,9,10]
+let a=arr.Myfilter((el)=>{
+    if(el<6){
+        return el
+    }
+})
+console.log(a)
+</script>

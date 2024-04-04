@@ -1,0 +1,37 @@
+<!-- 4. Write a program to check if a number is positive, negative, or zero. -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <br /><br /><br />
+    <center>
+      <label>ENTER ANY NUMBER : </label>
+      <input type="text" id="user" />
+
+      <br /><br /><br />
+
+      <h1 id="ans"></h1>
+    </center>
+  </body>
+</html>
+
+<script>
+  let a = document.getElementById("user").value;
+
+  if (a == "") {
+    document.getElementById("ans").innerHTML = "ENTER A NUMBER !";
+  } else {
+    if (a < 0) {
+      document.getElementById("ans").innerHTML = "NEGATIVE"
+    } else if (a > 0) {
+      document.getElementById("ans").innerHTML = "POSITIVE";
+    } else if (a == 0) {
+      document.getElementById("ans").innerHTML = "ZERO";
+    }
+  }
+</script>

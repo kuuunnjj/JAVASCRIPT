@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <style>
+    *{
+        margin-top: 20px;
+    }
+    div{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+    #Search{
+        margin-right: 5px;
+    }
+    #main{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+  </style>
+  <body>
+    <div class="div">
+      <input type="text" id="Search" placeholder="Enter state..." />
+      <button onclick="Corona()">Search</button>
+    </div>
+    <div id="main"></div>
+  </body>
+</html>
+<script>
+  function Corona() {
+    fetch("https://data.covid19india.org/v4/min/data.min.json")
+      .then(function (response) {
+        return response.json();
+      })
+      .then(function (json) {
+        console.log(json);
+        Display_Data(json);
+      });
+  }
+  Corona();
+
+  function Display_Data(json) {
+    let search_State = document.getElementById("Search").value;
+    let search_State_New = search_State.toUpperCase();
+
+    for (let key in json) {
+      if (search_State_New == key) {
+        console.log(json[key].delta);
+
+        let casesName = document.createElement("h1");
+        casesName.innerHTML = "State Name : " + search_State_New;
+
+        let cases = document.createElement("p");
+        let caseData = json[key].total.confirmed;
+        cases.innerHTML = "Total Cases : " + caseData;
+
+        let recovered = document.createElement("p");
+        let recoveredData = json[key].total.recovered;
+        recovered.innerHTML = "Recovered Data : " + recoveredData;
+
+        let cases_Today = document.createElement("p");
+        let cases_Today_Data = json[key].delta7.confirmed;
+        cases_Today.innerHTML = "Cases Today : " + cases_Today_Data;
+
+        let cases_Recovered = document.createElement("p");
+        let cases_Recovered_Data = json[key].delta7.recovered;
+        cases_Recovered.innerHTML = "Cases Today : " + cases_Recovered_Data;
+
+        document
+          .getElementById("main")
+          .append(casesName, cases, recovered, cases_Today, cases_Recovered);
+      }
+    }
+  }
+</script>

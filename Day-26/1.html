@@ -1,0 +1,105 @@
+<!-- 1. Complete the functionality in the file selectors.html
+On clicking the button Change H1 the colour of first <h1> should turn to red
+On clicking the button Change H3 the colour of all <h3> should turn to green
+On clicking the button Change H5 the colour of all <h5> should turn to blue
+On clicking Change Green all the elements with the class green should change to green
+On clicking Change Blue all the elements with the class blue should change to blue
+On clicking Change Red all the elements with the class red should change to red -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <center>
+      <h1>SWAGAT HEIN APKA EK NAYE SHOW MEIN !</h1>
+      <button onclick="lal()">H1 MEIN CHEDKHANI KRNI HEIN KYA ?</button>
+
+      <h3>TOH KISE HO BHAI LOG, JAHA PE BHAI LOG VAHA PE HARIYALI</h3>
+      <h3>BHAI LOG KO GHUMNE JANA HEIN</h3>
+      <h3>BHAI LOG SO JAYEGE AB !!</h3>
+      <button onmouseenter="hariyali()" onmouseleave="hariyali2()">
+        H3 MEIN CHEDKHANI KRNI HEIN KYA ?
+      </button>
+
+      <h5>
+        SONE K BAD BHAI LOG KE SAPNE MEIN NEELE NEELE AMBAR PAR GANA YAAD ATAA
+        HEIN
+      </h5>
+      <h5>NEELA AMBAR HEIN RE BABA</h5>
+      <h5>SAMJA TU ?</h5>
+      <h5>NAI RE TU NAI SAMJA !</h5>
+      <button onclick="neela()">H5 MEIN CHEDKHANI KRNI HEIN KYA ?</button>
+
+      <div class="green">MEIN HARIYALI KA BADSHAH HOOON !</div>
+      <button onclick="harabhara()">HARIYALI MEIN CHEDKHANI KRNI HEIN KYA ?</button>
+
+      <div class="blue">MEIN NEELA HOON BHAI !</div>
+      <button onclick="neelbhara()">NEELE AMBAR MEIN CHEDKHANI KRNI HEIN KYA ?</button>
+
+      <div class="red">MUJHE LAAL DUPATTAA DIKHA THA REE !</div>
+      <button onclick="lalbhara()">LAAL DUPPTE MEIN CHEDKHANI KRNI HEIN KYA ?</button>
+    </center>
+  </body>
+</html>
+
+<script>
+
+  let b = document.querySelectorAll("button");
+    for(let i = 0; i < b.length; i++) {
+        b[i].style.marginTop = "10px";
+        b[i].style.marginBottom = "30px";
+    }
+
+  function lal() {
+    document.getElementsByTagName("h1")[0].style.color = "red";
+    // let a = document.querySelector("h1").style.color = "red"
+  }
+
+  function hariyali(){
+    let c = document.querySelectorAll("h3");
+    for(let i = 0; i < c.length; i++) {
+        c[i].style.color = "green";
+        c[i].style.transition = "1s";
+  }}
+
+  function hariyali2(){
+    let c = document.querySelectorAll("h3");
+    for(let i = 0; i < c.length; i++) {
+        c[i].style.color = "black";
+        c[i].style.transition = "1s";
+  }
+}
+
+function neela(){
+    let e = document.querySelectorAll("h5");
+    for(let i = 0; i < e.length; i++) {
+        e[i].style.color = "blue";
+  }
+  }
+
+  function harabhara(){
+    let e = document.querySelectorAll(".green");
+    for(let i = 0; i < e.length; i++) {
+        e[i].style.color = "green";
+  }
+  }
+
+  function neelbhara(){
+    let e = document.querySelectorAll(".blue");
+    for(let i = 0; i < e.length; i++) {
+        e[i].style.color = "blue";
+  }
+  }
+
+  function lalbhara(){
+    let e = document.querySelectorAll(".red");
+    for(let i = 0; i < e.length; i++) {
+        e[i].style.color = "red";
+  }
+  }
+  
+</script>

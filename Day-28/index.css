@@ -1,0 +1,106 @@
+*{
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+  background-color: black;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+
+}
+
+h1{
+  text-align: center;
+  color: lightcoral;
+  font-size: 40px;
+  padding-block: 30px;
+  border-bottom: 2px solid lightcoral;
+  margin-bottom: 30px;
+}
+
+.main{
+  display: flex;
+  justify-content: space-between;
+  padding-inline: 30px;
+}
+
+form{
+  width: 30%;
+  height: 350px;
+}
+
+label{
+  color: lightcoral;
+  font-size: 14px;
+
+}
+
+::-webkit-scrollbar{
+  width: 0px;
+  height: 0px;
+}
+
+input{
+  outline: none;
+  border: none;
+  border-bottom: 2px solid lightcoral;
+  width: 100%;
+  margin-bottom: 30px;
+  margin-top: 20px;
+  padding-bottom: 10px;
+  color: rgb(255, 255, 255);
+}
+input::placeholder{
+  color: rgba(224, 206, 206, 0.616);
+}
+
+#batch{
+  outline: none;
+  border: none;
+  border-bottom: 2px solid lightcoral;
+  width: 100%;
+  margin-bottom: 30px;
+  color: rgb(255, 255, 255);
+  margin-top: 20px;
+  padding-bottom: 10px;
+}
+.op{
+  background-color: transparent;
+  color: rgb(255, 255, 255);
+}
+.op:hover{
+  color: red;
+}
+button{
+  border: none;
+  border: 2px solid lightcoral;
+  color: rgb(255, 255, 255);
+  outline: none;
+  width: 100%;
+  padding: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+
+table{
+  width: 65%;
+  color: rgb(255, 255, 255);
+  text-transform: uppercase;
+  font-size: 16px;
+}
+table thead tr th{
+  font-size: 16px;
+  color: rgb(255, 255, 255);
+  font-weight: 400;
+  padding-bottom: 40px;
+  border-bottom: 2px solid rgb(255, 255, 255);
+  
+}
+table tbody tr td{
+  font-size: 13px;
+  color: rgb(255, 255, 255);
+  text-align: center;
+  background-color: lightcoral;
+}
+table thead tr{
+  border: 1px solid red;
+}

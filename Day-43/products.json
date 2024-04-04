@@ -1,0 +1,51 @@
+
+[
+    {
+        "id" : 1,
+        "img" : "1.jpg",
+        "name" : "product - 1",
+        "price" : "200$"
+    },
+    {
+        "id" : 2,
+        "img" : "2.jpg",
+        "name" : "product - 2",
+        "price" : "100$"
+    },
+    {
+        "id" : 3,
+        "img" : "3.jpg",
+        "name" : "product - 3",
+        "price" : "500$"
+    },
+    {
+        "id" : 4,
+        "img" : "4.jpg",
+        "name" : "product - 4",
+        "price" : "200$"
+    },
+    {
+        "id" : 5,
+        "img" : "4.jpg",
+        "name" : "product - 4",
+        "price" : "200$"
+    },
+    {
+        "id" : 6,
+        "img" : "1.jpg",
+        "name" : "product - 1",
+        "price" : "200$"
+    },
+    {
+        "id" : 7,
+        "img" : "2.jpg",
+        "name" : "product - 2",
+        "price" : "100$"
+    },
+    {
+        "id" : 8,
+        "img" : "3.jpg",
+        "name" : "product - 3",
+        "price" : "500$"
+    }
+]

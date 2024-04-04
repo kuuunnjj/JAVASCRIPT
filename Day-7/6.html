@@ -1,0 +1,58 @@
+<!-- **Question 6:** check if triangle is equilateral , scalene or isosoceles -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <center>
+      <br /><br /><br />
+      <label>ENTER FIRST ANGLE : </label>
+      <input type="text" id="a" />
+      <label>ENTER SECOND ANGLE : </label>
+      <input type="text" id="b" />
+      <label>ENTER THIRD ANGLE : </label>
+      <input type="text" id="c" />
+      <br /><br /><br />
+      <h1 id="ans"></h1>
+    </center>
+  </body>
+</html>
+
+<script>
+    let d = document.getElementById("a").value
+    let e = document.getElementById("b").value
+    let f = document.getElementById("c").value
+
+    let g = +d + +e + +f
+
+    if(d == "" && e == "" && f == ""){
+        document.getElementById("ans").innerHTML = "ENTER ANGLES"
+    }
+    else{
+        if(g == 180){
+            document.getElementById("ans").innerHTML = "TRANGLE !"
+            console.log("TRANGLE !")
+
+            if(d == 60 && e == 60 && f == 60){
+                document.getElementById("ans").innerHTML = "EQUILATERL !"
+                console.log("EQUILATERL !")
+            }
+            else if(d != e && e != f && d != f){
+                document.getElementById("ans").innerHTML = "SCALENE !"
+                console.log("SCALENE !")
+            }
+            else{
+                document.getElementById("ans").innerHTML = "ISOSCELES !"
+                console.log("ISOSCELES !")
+            }
+        }
+        else{
+            document.getElementById("ans").innerHTML = "NOT A TRANGLE !"
+            console.log("NOT A TRANGLE !")
+        }
+    }
+</script>

@@ -1,0 +1,70 @@
+<!-- **Task 1: Create 2 Sliders**
+
+Using HTML, CSS, and JavaScript, create an automatic image slider. The slider should display at least five images and automatically transition to the next image every 3 seconds. -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <style>
+    * {
+      margin: 0px;
+      padding: 0px;
+      box-sizing: border-box;
+      background-color: black;
+    }
+    img {
+      width: 100%;
+      height: 400px;
+      object-fit: cover;
+      display: none;
+    }
+    h1{
+        color: lightblue;
+        font-family:Verdana, Geneva, Tahoma, sans-serif;
+        text-align: center;
+        margin-top: 30px;
+        margin-bottom: 20px;
+    }
+  </style>
+  <body>
+    <h1>PURE SLIDER WITH JS</h1>
+    <img
+      src="https://e0.pxfuel.com/wallpapers/898/84/desktop-wallpaper-programming-minimalist-developers.jpg"
+      alt=""
+    />
+    <img src="https://wallpapercave.com/wp/wp6476461.png" alt="" />
+    <img
+      src="https://www.haveprogrammingbooks.com/wp-content/uploads/2021/06/large-2.png"
+      alt=""
+    />
+  </body>
+</html>
+
+<script>
+    let imgGet = document.querySelectorAll("img")
+    let index = 0
+
+    function sliders(index){
+        for(i = 0; i < imgGet.length; i++){
+            imgGet[i].style.display = "none"
+        }
+        imgGet[index].style.display = "block"
+    }
+
+    function slideShow(){
+        setInterval(()=>{
+            sliders(index)
+            index++
+            if(index >= imgGet.length){
+                index = 0
+            }
+        },1000)
+    }
+
+    slideShow()
+
+</script>

@@ -1,0 +1,40 @@
+<!-- Q6. Find odd number function. -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <center>
+      <br /><br /><br />
+      <label>ENTER THE VALUE : </label>
+      <input type="text" id="in" />
+      <br /><br />
+      <h1 id="ans"></h1>
+      <br /><br /><br />
+    </center>
+  </body>
+</html>
+
+<script>
+  function hi() {
+    let a = document.getElementById("in").value;
+
+    if (a == "") {
+      document.getElementById("ans").innerHTML = "ENTER VALUE !";
+    } else {
+      if (a % 2 != 0) {
+        console.log("ODD !");
+        document.getElementById("ans").innerHTML = "ODD !";
+      } else {
+        console.log("NOT AN ODD !");
+        document.getElementById("ans").innerHTML = "NOT AN ODD !";
+      }
+    }
+  }
+
+  hi();
+</script>

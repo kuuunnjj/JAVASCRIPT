@@ -1,0 +1,61 @@
+<!-- **Question 2:**
+
+**Title:** Day of the Week Identifier
+
+**Description:** You are building a program to determine the day of the week in JavaScript. Write a program takes a numeric value representing a day of the week (1 for Sunday, 2 for Monday, and so on) and uses a `switch` statement to determine and console the corresponding day. If the input is not within the range of 1 to 7, console "Invalid input." -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <center>
+        <br><br><br>
+        <label>ENTER VALUE : </label>
+        <input type="text" id="in">
+        <br><br>
+        <h1 id="ans"></h1>
+    </center>
+</body>
+</html>
+
+<script>
+    a = document.getElementById("in").value
+
+    if(a == ""){
+        document.getElementById("ans").innerHTML = "ENTER VALUES !"
+    }
+    else{
+        switch(parseInt(a)){
+        case 1 : document.getElementById("ans").innerHTML = "MONDAY !"
+        console.log("MONDAY !")
+        break
+        case 2 : document.getElementById("ans").innerHTML = "TUESDAY !"
+        console.log("TUESDAY !")
+        break
+        case 3 : document.getElementById("ans").innerHTML = "WEDNESDAY !"
+        console.log("WEDNESDAY !")
+        break
+        case 4 : document.getElementById("ans").innerHTML = "THURSDAY !"
+        console.log("THURSDAY !")
+        break
+        case 5 : document.getElementById("ans").innerHTML = "FRIDAY !"
+        console.log("FRIDAY !")
+        break
+        case 6 : document.getElementById("ans").innerHTML = "SATURDAY !"
+        console.log("SATURDAY !")
+        break
+        case 7 : document.getElementById("ans").innerHTML = "SUNDAY !"
+        console.log("SUNDAY !")
+        break
+        default : document.getElementById("ans").innerHTML = "INVALID !"
+        console.log("INVALID !")
+    }
+    }
+
+    
+</script>

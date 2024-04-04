@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+</html>
+
+<script>
+    var map = [
+        {s : "!", v : 10, q : 1, a : 10, c : "a", d : 30},
+        {s : "@", v : 11, q : 2, a : 11, c : "b", d : 31},
+        {s : "#", v : 12, q : 3, a : 12, c : "c", d : 32},
+        {s : "$", v : 13, q : 4, a : 13, c : "d", d : 33},
+        {s : "%", v : 14, q : 5, a : 14, c : "e", d : 34},
+        {s : "^", v : 15, q : 6, a : 15, c : "f", d : 35},
+        {s : "&", v : 16, q : 7, a : 16, c : "g", d : 36},
+        {s : "*", v : 17, q : 8, a : 17, c : "h", d : 37},
+    ]
+
+    for(let i = 0; i < map.length; i++){
+        console.log(map[i].s + " ==> " + map[i].v)
+    }
+    console.log("================================================================")
+    for(let i = 0; i < map.length; i++){
+        console.log(map[i].q + " ==> " + map[i].a)
+    }
+    console.log("================================================================")
+    for(let i = 0; i < map.length; i++){
+        console.log(map[i].c + " ==> " + map[i].d)
+    }
+</script>
