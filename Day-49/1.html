@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    *{
+        margin: 0px;
+        padding: 0px;
+        box-sizing: border-box;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+    }
+    #main{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        padding-inline: 80px;
+    }
+    .item-box{
+        width: 22%;
+        height: 300px;
+        display: flex;
+        flex-direction: column;
+        /* align-items: center; */
+        overflow: hidden;
+        margin-top: 50px;
+        box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+        padding: 30px;
+    }
+    .item-box img{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+    .item-box h1{
+        font-size: 20px;
+        margin-top: 30px;
+    }
+    .item-box p{
+        font-size: 13px;
+        margin-top: 10px;
+        overflow: hidden;
+    }
+    .head{
+        text-align: center;
+        text-decoration: underline;
+        margin-top: 30px;
+    }
+</style>
+<body>
+    <h1 class="head">MEAL BOX</h1>
+    <div id="main"></div>
+</body>
+</html>
+
+<script>
+    async function meal(){
+        let meal_Data = await fetch("https://www.themealdb.com/api/json/v1/1/categories.php")
+        let meal_Response = await meal_Data.json()
+
+        console.log(meal_Response)
+        displayMeal(meal_Response)
+    }
+    meal()
+
+    function displayMeal(meal_Response){
+        meal_Response.categories.map((el)=>{
+
+            let component = document.createElement("div")
+            component.setAttribute("class","item-box")
+
+            let thumbnail = document.createElement("img")
+            thumbnail.setAttribute("src",el.strCategoryThumb)
+            
+            let itemName = document.createElement("h1")
+            itemName.innerHTML = el.strCategory
+
+            let itemDiscription = document.createElement("p")
+            itemDiscription.innerHTML = el.strCategoryDescription
+
+            component.append(thumbnail,itemName,itemDiscription)
+
+            document.getElementById("main").append(component)
+
+        })
+    }
+</script>
