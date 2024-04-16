@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    *{
+        margin: 0px;
+        padding: 0px;
+        box-sizing: border-box;
+    }
+    body{
+        background-color: black;
+    }
+    .center{
+        width: 30%;
+        display: block;
+        margin: auto;
+    }
+</style>
+<body>
+    <img src="bulb-off.jpg" class="center" id="img">
+    <button class="center" style="width: 10%; height: 40px; cursor: pointer;" id="btn">Trun On</button>
+</body>
+</html>
+<script>
+    let btn = document.getElementById("btn")
+    let img = document.getElementById("img")
+    btn.addEventListener("click",bulbOnOff)
+
+    function bulbOnOff(){
+        if(btn.textContent.includes("On")){
+            img.src = "bulb-on.jpg"
+            btn.textContent = "Trun Off"
+        }
+        else{
+            img.src = "bulb-off.jpg"
+            btn.textContent = "Trun On"
+        }
+    }
+</script>

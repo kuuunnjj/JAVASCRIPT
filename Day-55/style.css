@@ -1,0 +1,95 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f3f4f6;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 20px auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.form-container,
+.search-container,
+.recipe-container {
+    width: calc(33.33% - 20px);
+    margin: 10px;
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+.form-container h2,
+.search-container h2,
+.recipe-container h2 {
+    margin-top: 0;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.form-container input[type="text"],
+.form-container select,
+.form-container textarea,
+.search-container input[type="text"],
+.search-container select {
+    width: 95%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.search-container select {
+    margin-left: 10px;
+}
+
+.form-container button,
+.recipe-container button {
+    padding: 10px 20px;
+    background-color: #5e72e4;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%;
+    transition: background-color 0.3s ease;
+}
+
+.form-container button:hover,
+.recipe-container button:hover {
+    background-color: #4d5bea;
+}
+
+.recipe-container {
+    background-color: #f8f9fa;
+}
+
+.recipe-container p {
+    color: #666;
+}
+
+.recipe-container button {
+    background-color: #d9534f;
+    margin-bottom: 10px;
+}
+
+.recipe-container button:hover {
+    background-color: #c9302c;
+}
+
+#recipeList{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+.recipe-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}

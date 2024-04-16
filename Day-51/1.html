@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <style>
+    * {
+      margin: 0px;
+      padding: 0px;
+      box-sizing: border-box;
+      font-family: Verdana, Geneva, Tahoma, sans-serif;
+    }
+    #container {
+      width: 100%;
+      height: 100vh;
+      display: flex;
+    }
+    #container_1 {
+      width: 65%;
+      height: 100vh;
+      display: flex;
+      border: 1px solid red;
+      padding: 30px;
+      justify-content: space-between;
+      align-items: center;
+    }
+    #container_1 #card {
+      width: 32%;
+      height: 340px;
+      padding: 20px;
+      box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+    #container_1 #card img {
+      width: 100%;
+      height: 140px;
+    }
+    #container_1 #card p {
+      font-size: 10px;
+      margin-top: 20px;
+    }
+    #container_1 #card h4 {
+      margin-top: 30px;
+    }
+    #container_1 #card button {
+      margin-top: 10px;
+      width: 100%;
+      border-radius: 2px;
+      border: none;
+      background-color: rgb(232, 232, 232);
+      height: 30px;
+      cursor: pointer;
+    }
+    #container_2 {
+      width: 35%;
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      border: 1px solid red;
+      padding: 30px;
+      overflow: scroll;
+    }
+    #container_2 #card_Added {
+      width: 100%;
+      height: 80px;
+      display: flex;
+      border: 1px solid red;
+    }
+    #container_2 #card_Added img {
+      width: 100px;
+      height: 80%;
+    }
+  </style>
+  <body>
+    <div id="container">
+      <div id="container_1">
+        <div id="card">
+          <img
+            id="i-1"
+            src="https://assets.aboutamazon.com/dims4/default/62656bb/2147483647/strip/false/crop/2000x1125+0+0/resize/1486x836!/quality/90/?url=https%3A%2F%2Famazon-blogs-brightspot.s3.amazonaws.com%2F55%2Fb7%2F715e834f4e7aa847edc236373c3d%2Ffreevee-hero-2000x1125.jpg"
+          />
+          <p>
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Rerum
+            praesentium adipisci aperiam pariatur sunt! Ut dicta iure eligendi
+            veritatis nisi.
+          </p>
+          <h4 id="i-2">2000$</h4>
+          <button onclick="addToCart()">Add to cart</button>
+        </div>
+        <div id="card">
+          <img
+            src="https://sg.sharp/sites/default/files/uploads/4%20Best%20Reasons%20Why%20TVs%20Can%20Improve%20Your%20Lifestyle-%20SHARP%20Malaysia.jpg"
+          />
+          <p>
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Rerum
+            praesentium adipisci aperiam pariatur sunt! Ut dicta iure eligendi
+            veritatis nisi.
+          </p>
+          <h4>2000$</h4>
+          <button onclick="addToCart()">Add to cart</button>
+        </div>
+        <div id="card">
+          <img
+            src="https://m.media-amazon.com/images/I/71aBBJm-AKL._AC_UF350,350_QL80_.jpg"
+          />
+          <p>
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Rerum
+            praesentium adipisci aperiam pariatur sunt! Ut dicta iure eligendi
+            veritatis nisi.
+          </p>
+          <h4>2000$</h4>
+          <button onclick="addToCart()">Add to cart</button>
+        </div>
+      </div>
+      <div id="container_2">
+        <div id="card_Added">
+          <!-- <button>-</button>
+          <p id="qty">1</p>
+          <button>+</button> -->
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
+<script>
+  // function addToCart() {
+  //   let data = document.getElementById("card");
+  //   console.log(data);
+
+  //   let dataArr = [];
+  //   dataArr.push;
+  // }
+</script>

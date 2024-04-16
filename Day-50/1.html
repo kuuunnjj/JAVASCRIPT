@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <style>
+    * {
+      margin: 0px;
+      padding: 0px;
+      background-color: black;
+      color: white;
+    }
+    input {
+      border: 1px solid white;
+      outline: none;
+      width: 500px;
+      height: 40px;
+      padding-left: 20px;
+      margin-top: 50px;
+    }
+    #submit {
+      width: 100px;
+      height: 40px;
+      padding-left: 0px;
+    }
+    #msg {
+      margin-top: 30px;
+      font-size: 55px;
+    }
+  </style>
+  <body>
+    <center>
+      <form id="main">
+        <input type="text" id="data" placeholder="Enter the price..." />
+        <input type="submit" id="submit" />
+      </form>
+      <img
+        src="https://upload.wikimedia.org/wikipedia/commons/b/b9/Youtube_loading_symbol_1_(wobbly).gif"
+        id="load"
+        style="width: 100px; margin-top: 40px"
+      />
+      <h1 id="msg"></h1>
+    </center>
+  </body>
+</html>
+<script>
+  document.getElementById("load").style.display = "none";
+  document.getElementById("main").addEventListener("submit", function () {
+
+    event.preventDefault();
+
+    let price = document.getElementById("data").value;
+    document.getElementById("msg").innerHTML = "";
+
+    let pro = new Promise(function (res, rej) {
+      setTimeout(() => {
+        if (price >= 1 && price <= 500) {
+          res("Success !");
+        } else {
+          rej("Error !");
+        }
+      }, 1000);
+    });
+
+    document.getElementById("load").style.display = "block";
+
+    pro
+      .then(function (res) {
+        document.getElementById("load").style.display = "none";
+        document.getElementById("msg").innerHTML = res;
+      })
+      .catch(function (rej) {
+        document.getElementById("load").style.display = "none";
+        document.getElementById("msg").innerHTML = rej;
+    });
+
+  });
+</script>
