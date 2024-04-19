@@ -10,15 +10,14 @@
 </body>
 </html>
 <script>
-    // 4. Find sum of target get index.
-    box = [4,6,2,8,3,5]
-    let target = 10
+    // 2.Find target in given array.
+
+    let box = [2,4,5,6,7,9]
+    target = 5
 
     for(let i = 0; i < box.length; i++){
-        for(let j = 0; j < box.length; j++){
-            if(box[i]+box[j] === target){
-                console.log(i,j)
-            }
+        if(box[i] === target){
+            console.log("index of targeted value :",i)
         }
     }
 </script>
