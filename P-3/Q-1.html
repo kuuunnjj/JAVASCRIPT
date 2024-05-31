@@ -1,0 +1,57 @@
+<!-- Perform methods in stack :
+push
+pop
+peek
+size
+isEmpty -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+
+  <body></body>
+</html>
+<script>
+  class stack {
+    constructor() {
+      this.stack = [];
+    }
+    push(item) {
+      this.stack.push(item);
+    }
+    isEmpty() {
+      return this.stack.length === 0;
+    }
+    pop() {
+      if (this.stack.length === 0) {
+        return "empty";
+      } else {
+        return this.stack.pop();
+      }
+    }
+    peek() {
+      if (this.isEmpty() === 0) {
+        return "empty";
+      } else {
+        return this.stack[this.stack.length - 1];
+      }
+    }
+    size() {
+      return this.stack.length;
+    }
+  }
+
+  let stack1 = new stack();
+  stack1.push(44);
+  stack1.push(55);
+  stack1.push(58);
+  stack1.push(50);
+
+  stack1.pop();
+  console.log(stack1);
+  console.log(stack1.size());
+  console.log(stack1.peek())
+</script>
