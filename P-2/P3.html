@@ -1,0 +1,26 @@
+<!-- Example 3:Input: nums = [5,4,-1,7,8]
+Output: 23
+Explanation: The subarray [5,4,-1,7,8] has the largest sum 23. -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+</html>
+<script>
+  let nums = [5,4,-1,7,8]
+  let max1=0
+  let max2=0
+
+  for (let i = 0; i <nums.length; i++){
+    max1=Math.max(0,max1+=nums[i])
+    max2=Math.max(max1,max2)
+
+  }
+  console.log(max2)
+</script>
